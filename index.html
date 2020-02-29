@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+audio {
+vertical-align: middle;
+}
+
+p {
+vertical-align: middle;
+padding-bottom: 5px;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Accordion with symbols</h2>
+<p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+<button class="accordion">Section 1 - Tashahhud</button>
+<div class="panel"><p>Tashahhud (complete)
+   <audio controls="audio">
+  <source src="resources\audio\salaati1\1tashahhud_complete.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>Tashahhud (slow)
+   <audio controls="audio">
+  <source src="resources/audio/salaati1/2tashahhud_slow.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>Tashahhud line 1
+   <audio controls="audio">
+  <source src="resources/audio/salaati1/3tashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>Tashahhud line 2
+   <audio controls="audio">
+  <source src="resources/audio/salaati1/4tashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>Tashahhud line 3
+   <audio controls="audio">
+  <source src="resources/audio/salaati1/5tashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>Tashahhud line 4
+   <audio controls="audio">
+  <source src="resources/audio/salaati1/6tashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>Tashahhud line 5
+   <audio controls="audio">
+  <source src="resources/audio/salaati1/7tashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+</div>
+
+<button class="accordion">Section 2 - Reciting blessings on the Prophet after tashahhud</button>
+<div class="panel"><p>Reciting blessings on the Prophet after tashahhud (complete)
+   <audio controls="audio">
+  <source src="resources\audio\salaati2\1blessingsaftertashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>Reciting blessings on the Prophet after tashahhud (slow)
+   <audio controls="audio">
+  <source src="resources\audio\salaati2\2blessingsaftertashahhud_slow.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>line 1
+   <audio controls="audio">
+  <source src="resources\audio\salaati2\3blessingsaftertashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>line 2
+   <audio controls="audio">
+  <source src="resources\audio\salaati2\4blessingsaftertashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>line 3
+   <audio controls="audio">
+  <source src="resources\audio\salaati2\5blessingsaftertashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>line 4
+   <audio controls="audio">
+  <source src="resources\audio\salaati2\6blessingsaftertashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>line 5
+   <audio controls="audio">
+  <source src="resources\audio\salaati2\7blessingsaftertashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+<p>line 5
+   <audio controls="audio">
+  <source src="resources\audio\salaati2\8blessingsaftertashahhud.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> </p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
